@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/3_enemies_chicken/chicken_normal/1_walk/1_w.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smokum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+
+
+    <script src="models/world.class.js"></script>
+
+    <script src="models/basic/drawable-object.class.js"></script>
+    <script src="models/basic/movable-object.class.js"></script>
+
+    <script src="models/ui/status-bar.class.js"></script>
+    <script src="models/ui/bottle-status-bar.class.js"></script>
+    <script src="models/ui/coin-status-bar.class.js"></script>
+    <script src="models/ui/endboss-status-bar.class.js"></script>
+
+
+    <script src="models/objects/throwable-object.class.js"></script>
+
+    <script src="models/objects/background-object.class.js"></script>
+    <script src="models/objects/character.class.js"></script>
+    <script src="models/objects/chicken.class.js"></script>
+    <script src="models/objects/chicken_small.class.js"></script>
+    <script src="models/objects/cloud.class.js"></script>
+    <script src="models/objects/coins.class.js"></script>
+    <script src="models/objects/endboss.class.js"></script>
+    <script src="models/objects/bottle.class.js"></script>
+
+    <script src="models/keyboard.class.js"></script>
+    <script src="models/level.class.js"></script>
+
+    <script src="levels/level1.js"></script>
+
+    <script src="js/game.js"></script>
+
+
+    <title>El Pollo Loco</title>
+</head>
+
+<body onload="init()">
+
+    <p class="headline">El Pollo Loco</p>
+
+    <div class="divCanvas" id="divCanvas">
+        <canvas class="canvas" id="canvas" width="720" height="480"></canvas>
+
+        <div class="startImage" id="startImage"></div>
+
+        <button onclick="startGame()" id="startButton" class="startButton ">Start</button>
+
+        <div class="icons d-none" id="icons">
+            <i class="audio-button  bi-volume-mute" id="playGameSound" onclick="playGameSound()"></i>
+            <i class="bi bi-fullscreen fullscreen" id="fullscreen" onclick="fullscreen()"></i>
+        </div>
+
+        <div class="gameOver d-none" id="gameOver">
+            <img class="imageGameOver" src="./img/9_intro_outro_screens/game_over/game over.png">
+            <button class="backToMenuButton" id="backToMenuButton" onclick="backToMenuButton()">Back to Menu</button>
+        </div>
+        <div class="controls" id="controls">            
+            <i class="bi bi-arrow-left-square-fill"></i>
+            <span> MOVE LEFT</span>
+            <i class="bi bi-arrow-right-square-fill"></i>
+            <span> MOVE RIGHT</span>
+            <img src="./img/icons/space-bar.svg" class="spacebar">
+            <span>JUMP</span>
+            <img src="./img/icons/d.svg" class="spacebar">
+            <span>THROW BOTTLE</span>         
+        </div>
+
+        <div class="mobileBtns d-none" id="mobileBtns">
+            <div class="mobile-moveBtns">
+                <img src="./img/mobile/mobile_left.png" id="mobileLeft">
+                <img src="./img/mobile/mobile_right.png" id="mobileRight">                
+            </div>
+            <div class="rightBtns" >
+                <img src="./img/mobile/mobile_up.png" id="mobileUp">
+                <img src="./img/mobile/mobile_bottle.png" id="mobileThrow">
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <h2 class="flip-screen-alert">Please rotate your phone by 90°<i class="bi bi-phone"></i></h2>
+
+</body>
+
+</html>

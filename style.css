@@ -1,0 +1,453 @@
+@font-face {
+    font-family: 'zabers';
+    src: url('fonts/zabers.ttf');
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-position: bottom;
+    background-size: 100% 110%;
+    background-repeat: no-repeat;
+    background-image: url('./img/background.png');
+    font-family: 'zabers', 'Courier New', Courier, monospace;
+    font-size: 25px;
+    margin: 0px;
+}
+
+.canvas {
+    border-radius: 20px;
+    display: block;
+}
+
+.headline {
+    font-size: 30px;
+
+}
+
+.icons {
+    position: absolute;
+    top: 4%;
+    left: 79%;
+    display: flex;
+    width: 120px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.startImage {
+    background-image: url('./img/9_intro_outro_screens/start/startscreen_1.png');
+    background-size: 100% 100%;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 20px;
+}
+
+.gameOver {
+    background-image: url('./img/5_background/first_half_background.png');
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+.backToMenuButton {
+    left: 42%;
+    top: 6%;
+    z-index: 2;
+    width: 160px;
+    height: 80px;
+    position: absolute;
+    padding: 10px 40px 10px 40px;
+    border-radius: 30%;
+    border: 3px solid rgb(231, 141, 4);
+    color: #000000;
+    background: #FFDC02;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    font-family: 'zabers', 'Courier New', Courier, monospace;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backToMenuButton:hover {
+    transform: scale(1.2);
+}
+
+.imageGameOver {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.divCanvas {
+    position: absolute;
+    display: block;
+}
+
+.firstBigImage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+
+.startButton {
+    left: 42%;
+    top: 6%;
+    z-index: 2;
+    width: 110px;
+    height: 55px;
+    position: absolute;
+    padding: 10px 40px 10px 40px;
+    border-radius: 30%;
+    border: 3px solid rgb(231, 141, 4);
+    color: #000000;
+    background: #FFDC02;
+    cursor: pointer;
+    /* transition: all 200ms ease-in-out; */
+    font-family: 'zabers', 'Courier New', Courier, monospace;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.startButton:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.fullscreenDisplay {
+    height: 100%;
+    width: 100%;
+}
+
+
+.d-none {
+    display: none !important;
+}
+
+.audio-button {
+    right: 4%;
+    font-size: 40px;
+}
+
+.audio-button:hover {
+    transform: scale(1.2);
+}
+
+
+.controls {
+    position: relative;
+    top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.spacebar {
+    height: 30px;
+}
+
+.fullscreen:hover {
+    transform: scale(1.2);
+}
+
+.gamepad:hover {
+    transform: scale(1.2);
+}
+
+h2 {
+    display: none;
+    color: black;
+    text-align: center;
+}
+
+.mobileBtns {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.mobileBtns img {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.mobile-moveBtns {
+    margin-top: 10px;
+}
+
+.mobile-moveBtns img {
+    height: 40px;
+    width: 40px;
+}
+
+.rightBtns img {
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (max-width: 740px) {
+    .divCanvas {
+        width: 100%;
+    }
+
+    .canvas {
+        width: 100%;
+    }
+
+    .startButton {
+        width: 60px;
+        height: 54px;
+        font-size: 22px;
+    }
+
+    .gameOver {
+        width: 100%;
+    }
+
+}
+
+    @media screen and (max-width: 650px) {
+        .divCanvas {
+            display: none;
+        }
+
+        .headline {
+            display: none;
+        }
+
+        h2 {
+            display: block;
+        }
+
+        .controls {
+            display: none;
+        }
+
+        .fullscreen {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 820px) {
+        .headline {
+            display: none;
+        }
+
+        .canvas {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+        }
+
+        .startImage {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+        }
+
+        .gameOver {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+        }
+
+        .imageGameOver {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+        }
+    }
+
+    @media screen and (max-height: 600px) {
+        .divCanvas {
+            height: 100vh;
+            width: 100%;
+            border-radius: 0px;
+        }
+
+        body {
+            font-size: 15px;
+        }
+
+        .controls {
+            display: none;
+        }
+
+        .fullscreen {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 540px) {
+        .divCanvas {
+            height: 100vh;
+            width: 100%;
+            border-radius: 0px;
+        }
+
+        body {
+            font-size: 15px;
+        }
+
+        .controls {
+            display: none;
+        }
+
+        .fullscreen {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 414px) {
+        .divCanvas {
+            height: 100vh;
+            width: 100%;
+            border-radius: 0px;
+        }
+
+        body {
+            font-size: 15px;
+        }
+
+        .controls {
+            display: none;
+        }
+
+        .fullscreen {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 392px) {
+        .divCanvas {
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
+        }
+
+        body {
+            font-size: 15px;
+        }
+
+        .controls {
+            display: none;
+        }
+
+        .fullscreen {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 390px) {
+        .divCanvas {
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
+        }
+
+        body {
+            font-size: 15px;
+        }
+
+        .controls {
+            display: none;
+        }
+
+        .fullscreen {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 375px) {
+        .divCanvas {
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
+        }
+
+        body {
+            font-size: 15px;
+        }
+
+        .controls {
+            display: none;
+        }
+
+        .fullscreen {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 360px) {
+        .divCanvas {
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
+        }
+
+        body {
+            font-size: 15px;
+        }
+
+        .controls {
+            display: none;
+        }
+
+        .fullscreen {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 280px) {
+        .divCanvas {
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
+        }
+
+        body {
+            font-size: 15px;
+        }
+
+        .controls {
+            display: none;
+        }
+
+        .fullscreen {
+            display: none;
+        }
+    }
